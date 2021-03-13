@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  background: hsl(210, 46%, 95%);
+}
+
+.container {
+  max-width: 1440px;
+  /* background: url(design/desktop-design.jpg); */
+  display: grid;
+  padding: 3rem 10rem;
+  grid:
+    "block1 block1 block2 block5" 2fr
+    "block3 block4 block4 block5" 2fr
+    /1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.block1 {
+  grid-area: block1;
+  background: hsl(263, 55%, 52%);
+  color: white;
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-position: top right 100px;
+  background-repeat: no-repeat;
+}
+
+.block2 {
+  grid-area: block2;
+  background: hsl(217, 19%, 35%);
+  color: white;
+}
+
+.block3 {
+  grid-area: block3;
+  background: hsl(0, 0%, 100%);
+}
+
+.block4 {
+  grid-area: block4;
+  background: hsl(219, 29%, 14%);
+  color: white;
+}
+
+.block5 {
+  grid-area: block5;
+  background: hsl(0, 0%, 100%);
+}
+
+.block {
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 1s, opacity 1s;
+}
+.block:hover {
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+.block-title {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.block-title img {
+  border-radius: 50%;
+  width: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.block-title img::before {
+  content: "";
+  border: 2px solid red;
+  background: yellow;
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 4;
+}
+
+.block-title-body {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.block-title-body h5,
+.block-title-body h6 {
+  font-weight: 300;
+}
+
+h6 {
+  opacity: 0.5;
+}
+
+.block p {
+  /* font-weight: 600; */
+  font-size: 13px;
+}
+
+.opacity70 {
+  opacity: 0.7;
+}
+
+.block .fs {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.circle::before {
+  content: "";
+  background: yellow;
+  display: block;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  z-index: 4;
+}
+
+.circle-pp {
+  background: hsl(263, 55%, 52%);
+  /* display: block; */
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transform: translate(-2px, -2px);
+  position: absolute;
+  z-index: 1;
+}
